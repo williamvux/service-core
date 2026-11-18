@@ -26,8 +26,6 @@
   },
   "files": [
     "dist",
-    "src",
-    "tests",
     "README.md"
   ],
   "scripts": {
@@ -40,7 +38,8 @@
     "test": "tsx --test 'tests/**/*.test.ts'",
     "pack:check": "node scripts/pack-check.mjs",
     "verify": "yarn typecheck && yarn lint && yarn format:check && yarn test && yarn build && yarn pack:check",
-    "prepack": "yarn build"
+    "prepack": "yarn build",
+    "prepare": "yarn build"
   },
   "peerDependencies": {
     "express": "^5.0.0",
